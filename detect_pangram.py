@@ -1,3 +1,5 @@
+import string
+
 pangrams = [
     "The quick brown fox jumps over the lazy dog.",
     "Cwm fjord bank glyphs vext quiz",
@@ -14,9 +16,8 @@ non_pangrams = [
 
 
 def is_pangram():
-
     for item in pangrams:
-        print(item)
+        return set(string.ascii_lowercase) <= set(item.lower())
 
 
 if __name__ == "__main__":
